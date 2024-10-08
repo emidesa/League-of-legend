@@ -1,0 +1,29 @@
+body {
+    background-color: rgba(13, 13, 13, 0.954) !important;
+}
+
+.h5 {
+   font-size: 2rem !important;
+   font-family: fantasy;
+}
+
+
+.card-body {
+    background-color: rgb(83, 2, 83) !important;
+    color: goldenrod !important;
+    font-family: cursive !important;
+}
+
+h1 {
+    color: dodgerblue !important;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4.5rem !important;
+    
+    margin: 30px 0 !important;
+}
+
+.navbar {
+    background-color: rgb(79, 41, 150) !important; 
+    color: black !important;
+    font-weight: bold;
+}
