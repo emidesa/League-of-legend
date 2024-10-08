@@ -1,5 +1,6 @@
  body{
-        background-color: rgba(0, 0, 0, 0.911);
+        background-color: darkslateblue!important;
+        color: white !important;
        
       }
 
@@ -27,12 +28,23 @@ h1 {
     color: dodgerblue !important;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 4.5rem !important;
-    
     margin: 30px 0 !important;
 }
 
 .navbar {
-    background-color: rgb(79, 41, 150) !important; 
-    color: black !important;
-    font-weight: bold;
+        background: rgb(59,22,84);
+        background: linear-gradient(90deg, rgba(59,22,84,1) 0%, rgba(186,29,253,1) 50%, rgba(224,184,61,1) 100%);
+        color: goldenrod!important;
+      }
+
+
+.link{
+    text-decoration: none !important;
+    color: white !important;
+
 }
+
+.link:hover{
+    color: dodgerblue !important;
+}
+

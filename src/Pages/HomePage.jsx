@@ -7,7 +7,7 @@ import { Container, Pagination } from "react-bootstrap";
 
 const HomePage = () => {
    
-    const[Champions,setChampions] = useState([]);
+    const[Champions,setChampions] = useState({});
  
    
 

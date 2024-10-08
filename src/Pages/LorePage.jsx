@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react";
+import ChampionsServices from "../Services/ChampionsServices";
+import { useParams } from "react-router-dom";
+
 
 const LorePage = () => {
 
-    const [Champions, setChampions] = useState ([])
+    const {id} = useParams();
+    const [champions, setChampions] = useState ({})
 
     const fetchChampionsById= async () => {
         try {
             const response = await ChampionsServices.GetALLChampionsById(id);
-            setChampions(response.data.results);
+            setChampions(Object.entries(response.data.data)[0][1]);
            
         } catch (error) {
           console.log(error);
@@ -23,7 +27,16 @@ const LorePage = () => {
 
     
     return <>
-    <h1>Les relations entre les champions</h1>
+    <div className="d-flex align-items-center flex-column mb-5">
+    <h1> Lore of {id}</h1>
+    <img 
+                style={{ width: '60rem' }}
+                src={"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + champions.id + "_0.jpg"}
+                alt={"Image du champion"}
+            />
+       
+    <p className="m-5 bold">{champions.blurb}</p>
+    </div>
     </>;
 }
  
