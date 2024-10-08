@@ -1,6 +1,8 @@
-body {
-    background-color: rgba(13, 13, 13, 0.954) !important;
-}
+ body{
+        background-color: rgba(0, 0, 0, 0.911);
+       
+      }
+
 
 .h5 {
    font-size: 2rem !important;
@@ -12,6 +14,13 @@ body {
     background-color: rgb(83, 2, 83) !important;
     color: goldenrod !important;
     font-family: cursive !important;
+    
+}
+
+.card-img {
+    border-radius: 50%;
+     box-shadow: 5px 5px 5px white !important;
+    overflow: hidden;
 }
 
 h1 {

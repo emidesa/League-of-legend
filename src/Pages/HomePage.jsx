@@ -1,19 +1,21 @@
 import { useEffect, useState } from "react";
 import ChampionsServices from "../Services/ChampionsServices";
 import ChampionsCards from "../Components/ChampionsCards";
-import { Container } from "react-bootstrap";
+import { Container, Pagination } from "react-bootstrap";
 
 
 
 const HomePage = () => {
    
     const[Champions,setChampions] = useState([]);
+ 
    
 
     const fetchChampions = async () => {
         try {
             const response = await ChampionsServices.GetALLChampions();
             setChampions(response.data.data);
+        
             console.log(response.data.data);
            
         } catch (error) {

@@ -6,13 +6,11 @@ import { Link } from 'react-router-dom';
 const NavBar= () => {
   return <>
       <Navbar  >
-        <Container>
+        <Container className='d-flex justify-content-start'>
           <Navbar.Brand><Link to={'/'}>Home</Link></Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link className="navbar" href="#home">Home</Nav.Link>
-            <Nav.Link className="navbar" href="#features">Features</Nav.Link>
-            <Nav.Link className="navbar" href="#pricing">Pricing</Nav.Link>
-          </Nav>
+          <Navbar.Brand><Link to={'/LorePage'}> Lore </Link></Navbar.Brand>
+          <Navbar.Brand><Link to={'/RelationsPage'}> Relations </Link></Navbar.Brand>
+
         </Container>
       </Navbar>
     </>;
