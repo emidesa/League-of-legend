@@ -4,11 +4,12 @@ import { useParams } from "react-router-dom";
 
 const LorePage = () => {
     const { id } = useParams();
-    const [champion, setChampion] = useState(null);
+    const [champion, setChampion] = useState();
 
     const fetchChampionById = async () => {
         try {
             const response = await ChampionsServices.GetALLChampionsById(id);
+            console.log(response);
             setChampion(Object.entries(response.data.data)[0][1]);
         } catch (error) {
             console.log(error);
@@ -17,7 +18,7 @@ const LorePage = () => {
 
     useEffect(() => {
         fetchChampionById();
-    }, []);
+    }, [id]);
 
     if (!champion) return <div>Loading...</div>; // Ajout d'un état de chargement
 

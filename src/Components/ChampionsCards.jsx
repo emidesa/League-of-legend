@@ -6,7 +6,7 @@ const ChampionsCards = ({ChampionsCards}) =>  {
 
 const navigate = useNavigate();
     const navigateTo = (id) => {
-      navigate("/LorePage/"+id)
+      navigate("/LorePage/${id}");
     }
 
   return (

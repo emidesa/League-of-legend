@@ -4,8 +4,8 @@ import HomePage from './Pages/HomePage';
 import { BrowserRouter, Routes, Route } from'react-router-dom';
 import Navbar from './Components/NavBar';
 import LorePage from './Pages/LorePage';
+import LorePageBis from './Pages/LorePageBis';
 import RelationsPage from './Pages/RelationsPage';
-
 
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
 <Routes>
   <Route path='/' element={<HomePage/>}/>
   <Route path='/LorePage/:id' element={<LorePage/>}/>
+  <Route path='/LorePageBis/' element={<LorePageBis/>}/>
   <Route path='/RelationsPage' element={<RelationsPage/>}/>
 
   
