@@ -2,42 +2,39 @@ import { useEffect, useState } from "react";
 import ChampionsServices from "../Services/ChampionsServices";
 import { useParams } from "react-router-dom";
 
-
 const LorePage = () => {
+    const { id } = useParams();
+    const [champion, setChampion] = useState(null);
 
-    const {id} = useParams();
-    const [champions, setChampions] = useState ({})
-
-    const fetchChampionsById= async () => {
+    const fetchChampionById = async () => {
         try {
             const response = await ChampionsServices.GetALLChampionsById(id);
-            setChampions(Object.entries(response.data.data)[0][1]);
-           
+            setChampion(Object.entries(response.data.data)[0][1]);
         } catch (error) {
-          console.log(error);
+            console.log(error);
         }
-    }
-    
-    
-    useEffect(() => {
-       fetchChampionsById()
-    }, [])
-    
-    console.log();
+    };
 
-    
-    return <>
-    <div className="d-flex align-items-center flex-column mb-5">
-    <h1> Lore of {id}</h1>
-    <img 
-                style={{ width: '60rem' }}
-                src={"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + champions.id + "_0.jpg"}
-                alt={"Image du champion"}
-            />
-       
-    <p className="m-5 bold">{champions.blurb}</p>
-    </div>
-    </>;
-}
- 
+    useEffect(() => {
+        fetchChampionById();
+    }, []);
+
+    if (!champion) return <div>Loading...</div>; // Ajout d'un état de chargement
+
+    return (
+        <div className="lore-container">
+            <div className="lore-background">
+                <img
+                    src={"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + champion.id + "_0.jpg"}
+                    alt={"Image du champion"}
+                />
+            </div>
+            <div className="lore-content">
+                <h1>Lore of {champion.name}</h1>
+                <p className="m-5 bold">{champion.blurb}</p>
+            </div>
+        </div>
+    );
+};
+
 export default LorePage;

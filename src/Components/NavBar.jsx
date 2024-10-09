@@ -5,13 +5,23 @@ import { Link } from 'react-router-dom';
 import Logo from '../assets/Images/Logo-LoL.png';
 
 const NavBar= () => {
+
+  const defaultChampionsId = '';
   return <>
       <Navbar  >
         <Container className='d-flex justify-content-start'>
-          <Navbar.Brand> <img src={Logo} alt="Logo" style={{ width: '70px', height: '70px' }}/></Navbar.Brand>
-          <Navbar.Brand ><Link className='link' to={'/'}>Home</Link></Navbar.Brand>
-          <Navbar.Brand><Link className='link' to={'/LorePage/:id'}> Lore </Link></Navbar.Brand>
-          <Navbar.Brand><Link className='link' to={'/RelationsPage'}> Relations </Link></Navbar.Brand>
+          <Navbar.Brand> 
+      <img src={Logo} alt="Logo" style={{ width: '70px', height: '70px' }}/>
+      </Navbar.Brand>
+          <Navbar.Brand >
+            <Link className='link' to={'/'}>Home</Link>
+            </Navbar.Brand>
+          <Navbar.Brand>
+            <Link className='link' to={'/LorePage'}> Lore 
+          </Link></Navbar.Brand>
+          <Navbar.Brand>
+            <Link className='link' to={'/RelationsPage'}> Relations 
+            </Link></Navbar.Brand>
           
 
         </Container>

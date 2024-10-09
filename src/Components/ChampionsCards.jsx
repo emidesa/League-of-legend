@@ -10,7 +10,7 @@ const navigate = useNavigate();
     }
 
   return (
-    <Card style={{ width: '18rem' }} onClick ={() => {navigateTo(ChampionsCards.id)}}> 
+    <Card style={{ width: '15rem' }} onClick ={() => {navigateTo(ChampionsCards.id)}}> 
       <Card.Img variant="top" src={"https://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + ChampionsCards.id + "_0.jpg"}/>
       <Card.Body>
         <Card.Title className='d-flex align-items-center flex-column'>{ChampionsCards.name}</Card.Title>

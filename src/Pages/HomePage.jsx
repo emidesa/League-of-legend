@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ChampionsServices from "../Services/ChampionsServices";
 import ChampionsCards from "../Components/ChampionsCards";
-import { Container, Pagination } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 
 

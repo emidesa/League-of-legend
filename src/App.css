@@ -1,50 +1,129 @@
- body{
-        background-color: darkslateblue!important;
-        color: white !important;
-       
-      }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+body {
 
-.h5 {
-   font-size: 2rem !important;
-   font-family: fantasy;
-}
-
-
-.card-body {
-    background-color: rgb(83, 2, 83) !important;
-    color: goldenrod !important;
-    font-family: cursive !important;
-    
-}
-
-.card-img {
-    border-radius: 50%;
-     box-shadow: 5px 5px 5px white !important;
-    overflow: hidden;
-}
-
-h1 {
-    color: dodgerblue !important;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 4.5rem !important;
-    margin: 30px 0 !important;
+    font-family: 'Arial', sans-serif; /* Police de base */
+    margin: 0;
+    padding: 0;
 }
 
 .navbar {
-        background: rgb(59,22,84);
-        background: linear-gradient(90deg, rgba(59,22,84,1) 0%, rgba(186,29,253,1) 50%, rgba(224,184,61,1) 100%);
-        color: goldenrod!important;
-      }
-
-
-.link{
-    text-decoration: none !important;
-    color: white !important;
-
+    background-color: rgba(44, 44, 44, 0.9); /* Fond de la navbar légèrement transparent */
+    border-bottom: 2px solid #ffcc00; /* Bordure dorée */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Ombre */
 }
 
-.link:hover{
-    color: dodgerblue !important;
+.link {
+    color: #ffcc00; /* Couleur dorée pour les liens */
+    text-decoration: none; /* Pas de soulignement */
+    transition: color 0.3s, transform 0.3s; /* Animation pour le changement de couleur et la transformation */
 }
+
+.link:hover {
+    color: #fff700; /* Couleur plus claire au survol */
+    transform: scale(1.1); /* Effet de zoom au survol */
+}
+
+.card {
+    background-color: rgba(51, 51, 51, 0.9); /* Fond des cartes transparent */
+    border: 1px solid #444; /* Bordure des cartes */
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7); /* Ombre plus forte */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation pour le survol */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Effet de flottement */
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.9); /* Ombre plus forte au survol */
+}
+
+.card-img-top {
+    border-top-left-radius: 15px; /* Coins arrondis pour l'image */
+    border-top-right-radius: 15px;
+    filter: brightness(0.85); /* Assombrir légèrement l'image */
+}
+
+h1, h2, h3 {
+    font-family: 'Fantasy', cursive; /* Police de titre de style jeu */
+    color: #ffcc00; /* Couleur dorée pour les titres */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre pour le texte */
+}
+
+.container {
+    padding: 20px; /* Espacement autour des containers */
+    backdrop-filter: blur(5px); /* Flou en arrière-plan */
+}
+
+.bold {
+
+    font-weight: bold; /* Gras pour le texte */
+}
+
+/* Styles spécifiques pour les boutons */
+.btn-warning {
+    background-color: #ffcc00; /* Couleur de fond dorée */
+    border: none; /* Pas de bordure */
+    transition: background-color 0.3s, transform 0.3s; /* Animation */
+}
+
+.btn-warning:hover {
+    background-color: #e6b800; /* Couleur plus foncée au survol */
+    transform: scale(1.05); /* Effet de zoom au survol */
+}
+
+
+.lore-container {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+}
+
+.lore-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1; /* Mettre l'image en arrière-plan */
+}
+
+.lore-background img {
+    width: 100%; /* Prend toute la largeur */
+    height: 100%; /* Prend toute la hauteur */
+    object-fit: cover; /* Remplit tout l'écran en préservant le ratio */
+}
+
+.lore-content {
+    position: relative;
+    z-index: 2; /* Met le contenu au-dessus de l'image */
+    padding: 40px; /* Augmente le padding pour plus d'espace */
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Ombre */
+    color: white; /* Texte en blanc pour un meilleur contraste */
+    max-width: 800px; /* Limiter la largeur du texte */
+    text-align: center; /* Centre le texte dans le conteneur */
+    position: absolute; /* Permet de centrer verticalement */
+    top: 50%; /* Positionne le conteneur au centre de la page */
+    left: 50%; /* Positionne le conteneur au centre de la page */
+    transform: translate(-50%, -50%); /* Centre le conteneur */
+}
+
+.lore-content h1 {
+    font-size: 3rem; /* Taille du titre */
+    font-weight: bold; /* Met le titre en gras */
+    text-transform: uppercase; /* Met le titre en majuscules */
+    margin-bottom: 20px; /* Espace en dessous du titre */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ombre portée pour le titre */
+}
+
+.lore-content p {
+    font-size: 1.25rem; /* Augmente la taille de la description */
+    line-height: 1.6; /* Augmente l'interligne pour une meilleure lisibilité */
+    margin: 15px 0; /* Espace en haut et en bas de la description */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Ombre portée pour la description */
+}
+
+
 
