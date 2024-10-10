@@ -7,61 +7,62 @@ body {
 
 .home-page {
     background-image: url('https://pic.clubic.com/v1/images/1715435/raw');
-    background-size: cover; /* L'image couvre tout l'espace */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Évite la répétition de l'image */
-    height: calc(100vh - [HAUTEUR_NAVBAR]); /* Ajustez en fonction de la hauteur de la navbar */
-    width: 100vw; /* Utilise 100% de la largeur de la fenêtre */
-    position: relative; /* Assure que le positionnement est relatif */
-    left: 0; /* Commence à gauche */
-    right: 0; /* Termine à droite */
-    display: flex; /* Utilise Flexbox pour centrer le contenu */
-    flex-direction: column; /* Aligne le contenu verticalement */
-    justify-content: center; /* Centre le contenu verticalement */
-    align-items: center; /* Centre le contenu horizontalement */
-    color: white; /* Couleur du texte */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: calc(100vh - [HAUTEUR_NAVBAR]); /* Remplacez [HAUTEUR_NAVBAR] par la hauteur de votre navbar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    min-height: 100vh;
+    min-width: 100vw;
     padding: 20px; /* Ajoutez un peu de padding pour éviter que le contenu touche les bords */
-    margin: 0; /* Supprime les marges */
-    overflow: hidden; /* Évite le débordement */
 }
 
-
-
-
-
 .navbar {
-    background-color: #111;
+    background-color: #343a40; /* Une couleur de fond moderne et sobre */
     padding: 1rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* Espace entre les éléments */
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombre légère */
+    position: fixed; /* Fixe la navbar */
+    width: 100%; /* Prend toute la largeur */
+    z-index: 1000; /* Assure que la navbar est au-dessus du contenu */
+    transition: background-color 0.3s; /* Transition pour le changement de couleur */
+}
+
+.navbar:hover {
+    background-color: #282c2f; /* Changement de couleur au survol */
 }
 
 .navbar a {
-    background-color: #222;
-    color: #f1c40f;
+    color: #ffffff; /* Couleur blanche pour le texte */
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.3s; /* Transition douce pour l'arrière-plan */
 }
 
 .navbar a:hover {
-    background-color: #291179;
-    transform: scale(1.05);
-}
-
-.navbar + * {
-    margin-top: 20px;
-    border-top: 2px solid #f1c40f;
-    padding-top: 20px;
+    background-color: #2778bf; /* Couleur verte au survol */
+    transform: scale(1.1); /* Légère augmentation de la taille au survol */
 }
 
 .navbar img {
-    width: 50px;
-    height: auto;
+    width: 50px; /* Taille de l'image du logo */
+    height: auto; /* Garde le ratio */
 }
+
+.navbar .navbar-brand {
+    color: #1ea0cb; /* Une couleur dorée pour le texte de la marque */
+    font-family: 'Helvetica Neue', sans-serif; /* Police moderne et propre */
+    font-size: 1.5rem; /* Taille de police plus grande pour la marque */
+    font-weight: bold; /* Met le texte en gras */
+}
+
 
 .link {
     color: #ffcc00;
@@ -70,7 +71,7 @@ body {
 }
 
 .link:hover {
-    color: #fff700;
+    color: #ffc800;
     transform: scale(1.1);
 }
 

@@ -15,7 +15,7 @@ const LorePageBis = () => {
                     <li><strong>Aatrox :</strong> Autrefois un héros, il est devenu un symbole de désespoir et de destruction.</li>
                     <li><strong>Ahri :</strong> Une mage rusée qui cherche à comprendre son passé tout en protégeant ceux qu'elle aime.</li>
                     <li><strong>Akali :</strong> Une assassin qui lutte pour préserver l'honneur de son clan tout en affrontant des ennemis puissants.</li>
-                    {/* Ajoute d'autres champions selon ton besoin */}
+                  
                 </ul>
                 <h2>Conflits et Alliances</h2>
                 <p>
