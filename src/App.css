@@ -5,6 +5,30 @@ body {
     padding: 0;
 }
 
+.home-page {
+    background-image: url('https://pic.clubic.com/v1/images/1715435/raw');
+    background-size: cover; /* L'image couvre tout l'espace */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Évite la répétition de l'image */
+    height: calc(100vh - [HAUTEUR_NAVBAR]); /* Ajustez en fonction de la hauteur de la navbar */
+    width: 100vw; /* Utilise 100% de la largeur de la fenêtre */
+    position: relative; /* Assure que le positionnement est relatif */
+    left: 0; /* Commence à gauche */
+    right: 0; /* Termine à droite */
+    display: flex; /* Utilise Flexbox pour centrer le contenu */
+    flex-direction: column; /* Aligne le contenu verticalement */
+    justify-content: center; /* Centre le contenu verticalement */
+    align-items: center; /* Centre le contenu horizontalement */
+    color: white; /* Couleur du texte */
+    padding: 20px; /* Ajoutez un peu de padding pour éviter que le contenu touche les bords */
+    margin: 0; /* Supprime les marges */
+    overflow: hidden; /* Évite le débordement */
+}
+
+
+
+
+
 .navbar {
     background-color: #111;
     padding: 1rem;
@@ -181,9 +205,9 @@ h1, h2, h3 {
 
 .story-container {
     background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour améliorer la lisibilité */
-    padding: 80px; /* Espacement interne */
+    padding: 30px; /* Espacement interne */
     border-radius: 10px; /* Coins arrondis */
-    max-width: 700px; /* Limite la largeur pour un meilleur rendu */
+    max-width: 800px; /* Limite la largeur pour un meilleur rendu */
     text-align: center; /* Centre le texte à l'intérieur du conteneur */
 }
 
