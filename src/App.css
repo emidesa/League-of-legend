@@ -163,6 +163,56 @@ h1, h2, h3 {
     line-height: 1.6;
 }
 
+.lore-page {
+    background-image: url('https://displays.riotgames.com/static/poster-dragontrainer-tristana-9d23667c8cc0d48758cc308119c43fd0.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex; /* Utilisez Flexbox pour centrer le contenu */
+    flex-direction: column; /* Aligne le contenu verticalement */
+    justify-content: start; /* Centre le contenu verticalement */
+    align-items: start; /* Centre le contenu horizontalement */
+    color: white; /* Couleur du texte */
+    padding: 40px; /* Espacement autour du texte */
+    box-sizing: border-box;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre portée pour le texte */
+}
+
+.story-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour améliorer la lisibilité */
+    padding: 80px; /* Espacement interne */
+    border-radius: 10px; /* Coins arrondis */
+    max-width: 700px; /* Limite la largeur pour un meilleur rendu */
+    text-align: center; /* Centre le texte à l'intérieur du conteneur */
+}
+
+.lore-page h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.lore-page h2 {
+    font-size: 2em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.lore-page p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.lore-page ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.lore-page li {
+    margin-bottom: 10px;
+}
 
 
 

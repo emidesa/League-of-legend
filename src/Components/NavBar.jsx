@@ -6,7 +6,7 @@ import Logo from '../assets/Images/Logo-LoL.png';
 
 const NavBar= () => {
 
-  const defaultChampionsId = '';
+
   return <>
       <Navbar  >
         <Container className='d-flex justify-content-start'>
@@ -16,9 +16,6 @@ const NavBar= () => {
           <Navbar.Brand >
             <Link className='link' to={'/'}>Home</Link>
             </Navbar.Brand>
-          <Navbar.Brand>
-            <Link className='link' to={'/LorePage/:id'}> 
-          </Link></Navbar.Brand>
           <Navbar.Brand>
             <Link className='link' to={'/LorePageBis'}> Lore 
           </Link></Navbar.Brand>

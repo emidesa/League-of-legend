@@ -4,15 +4,17 @@ import { useParams } from "react-router-dom";
 
 const LorePage = () => {
     const { id } = useParams();
-    const [champion, setChampion] = useState();
+    const [champion, setChampion] = useState(null);
 
     const fetchChampionById = async () => {
         try {
             const response = await ChampionsServices.GetALLChampionsById(id);
             console.log(response);
+
             setChampion(Object.entries(response.data.data)[0][1]);
         } catch (error) {
-            console.log(error);
+                console.error("Erreur lors de la récupération du champion :", error.response ? error.response.data : error.message);
+            
         }
     };
 
@@ -31,7 +33,7 @@ const LorePage = () => {
                 />
             </div>
             <div className="lore-content">
-                <h1>Lore of {champion.name}</h1>
+                <h1>Lore of {id}</h1>
                 <p className="m-5 bold">{champion.blurb}</p>
             </div>
         </div>
