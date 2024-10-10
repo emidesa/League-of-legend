@@ -5,12 +5,11 @@ body {
     padding: 0;
 }
 
-.home-page {
+.home-page , .background-relation {
     background-image: url('https://pic.clubic.com/v1/images/1715435/raw');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: calc(100vh - [HAUTEUR_NAVBAR]); /* Remplacez [HAUTEUR_NAVBAR] par la hauteur de votre navbar */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,15 +17,58 @@ body {
     color: white;
     min-height: 100vh;
     min-width: 100vw;
-    padding: 20px; /* Ajoutez un peu de padding pour éviter que le contenu touche les bords */
+    padding: 20px; 
 }
+
+.video-container {
+    position: relative;
+    overflow: hidden;
+    height: 100vh; /* Prendre toute la hauteur de l'écran */
+}
+
+iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border: none; /* Supprimer la bordure par défaut */
+    transform: translate(-50%, -50%); /* Centrer l'iframe */
+    z-index: 1; /* Mettre la vidéo derrière le texte */
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrer le texte */
+    color: white; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    z-index: 2; /* Mettre le texte au-dessus de la vidéo */
+    backdrop-filter: blur(5px); /* Flou en arrière-plan pour améliorer la lisibilité */
+    padding: 20px; /* Espacement interne */
+    border-radius: 10px; /* Coins arrondis */
+}
+
+h1 {
+    font-size: 3rem; /* Taille du titre */
+    margin-bottom: 10px; /* Espacement sous le titre */
+}
+
+p {
+    font-size: 1.5rem; /* Taille du paragraphe */
+    margin: 0; /* Supprimer la marge par défaut */
+}
+
+
 
 .navbar {
     background-color: #343a40; /* Une couleur de fond moderne et sobre */
-    padding: 1rem;
+    padding: 0.5rem;
     display: flex;
     justify-content: space-between; /* Espace entre les éléments */
     align-items: center;
+    height: 10vh;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombre légère */
     position: fixed; /* Fixe la navbar */
     width: 100%; /* Prend toute la largeur */
@@ -39,21 +81,17 @@ body {
 }
 
 .navbar a {
-    color: #ffffff; /* Couleur blanche pour le texte */
+    color: #bc7621; 
     text-decoration: none;
     padding: 10px 15px;
     border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s; /* Transition douce pour l'arrière-plan */
+    transition: background-color 0.3s, transform 0.3s; 
 }
 
-.navbar a:hover {
-    background-color: #2778bf; /* Couleur verte au survol */
-    transform: scale(1.1); /* Légère augmentation de la taille au survol */
-}
 
 .navbar img {
-    width: 50px; /* Taille de l'image du logo */
-    height: auto; /* Garde le ratio */
+    width: 50px; 
+    height: auto;
 }
 
 .navbar .navbar-brand {
@@ -100,14 +138,13 @@ h1, h2, h3 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
+
 .container {
     padding: 20px;
     backdrop-filter: blur(5px);
 }
 
-.bold {
-    font-weight: bold;
-}
+
 
 .btn-warning {
     background-color: #ffcc00;
@@ -189,7 +226,7 @@ h1, h2, h3 {
 }
 
 .lore-page {
-    background-image: url('https://displays.riotgames.com/static/poster-dragontrainer-tristana-9d23667c8cc0d48758cc308119c43fd0.jpg');
+    background-image: url('https://img3.wallspic.com/crops/2/4/2/4/6/164242/164242-league_of_legends-k_da-ahri-fan_art-divertissement-3840x2160.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

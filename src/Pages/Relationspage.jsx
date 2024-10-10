@@ -19,8 +19,8 @@ const RelationsPage = () => {
     }, []);
 
     return (
-        <Container>
-            <h1 className="text-center my-4">Relations entre les champions</h1>
+        <Container className='background-relation'>
+            <h1 className="text-center m-5">Relations entre les champions</h1>
             <Row className="d-flex justify-content-center">
                 {Object.values(champions).map((champion) => (
                     <Col key={champion.id} md={3} className="mb-4">

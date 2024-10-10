@@ -14,7 +14,10 @@ const NavBar= () => {
       <img src={Logo} alt="Logo" style={{ width: '70px', height: '70px' }}/>
       </Navbar.Brand>
           <Navbar.Brand >
-            <Link className='link' to={'/'}>Home</Link>
+            <Link className='link' to={'/HomePage'}>Home</Link>
+            </Navbar.Brand>
+            <Navbar.Brand >
+            <Link className='link' to={'/ChampionsPage'}>Champions</Link>
             </Navbar.Brand>
           <Navbar.Brand>
             <Link className='link' to={'/LorePageBis'}> Lore 

@@ -20,7 +20,7 @@ const LorePage = () => {
 
     useEffect(() => {
         fetchChampionById();
-    }, [id]);
+    }, []);
 
     if (!champion) return <div>Loading...</div>; // Ajout d'un état de chargement
 

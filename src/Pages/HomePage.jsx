@@ -1,39 +1,25 @@
-import { useEffect, useState } from "react";
-import ChampionsServices from "../Services/ChampionsServices";
-import ChampionsCards from "../Components/ChampionsCards";
-import { Container } from "react-bootstrap";
+import React from 'react';
 
 const HomePage = () => {
-    const [Champions, setChampions] = useState({});
-
-    const fetchChampions = async () => {
-        try {
-            const response = await ChampionsServices.GetALLChampions();
-            setChampions(response.data.data);
-            console.log(response.data.data);
-        } catch (error) {
-            console.log(error);
-        }
-    };
-
-    useEffect(() => {
-        fetchChampions();
-    }, []);
-
     return (
-        <Container className="home-page">
-            <h1>All Champions</h1>
-            <div className="d-flex justify-content-center flex-wrap gap-5">
-                {Object.entries(Champions).map((Champion) => {
-                    return (
-                        <ChampionsCards ChampionsCards={Champion[1]} key={Champion[1].id} />
-                    );
-                })}
+        <div className="video-container">
+           
+            <iframe width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/aR-KAldshAE?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1"   
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>     
+            </iframe>
+                Votre navigateur ne prend pas en charge les vidéos.
+          
+            <div className="overlay">
+               
             </div>
-        </Container>
+        </div>
     );
 };
 
 export default HomePage;
-
-
