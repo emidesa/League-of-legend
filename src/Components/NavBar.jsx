@@ -26,7 +26,7 @@ const NavBar= () => {
             <Link className='link' to={'/RelationsPage'}> Relations 
             </Link></Navbar.Brand>
             <Navbar.Brand>
-            <Link className='link' to={'/ItemsPage'}> Items
+            <Link className='link' to={'/items'}> Items
             </Link></Navbar.Brand>
           
 

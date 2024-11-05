@@ -8,6 +8,8 @@ import LorePage from './Pages/LorePage';
 import LorePageBis from './Pages/LorePageBis';
 import RelationsPage from './Pages/Relationspage';
 import ItemsPage from './Pages/ItemsPage';
+import ItemDetailsPage from './Pages/ItemDetailsPage';
+
 
 
 function App() {
@@ -19,9 +21,10 @@ function App() {
   <Route path='/HomePage' element={<HomePage/>}/>
   <Route path='/ChampionsPage' element={<ChampionsPage/>}/>
   <Route path='/LorePage/:id' element={<LorePage/>}/>
-  <Route path='/LorePageBis/' element={<LorePageBis/>}/>
+  <Route path='/LorePageBis' element={<LorePageBis/>}/>
   <Route path='/RelationsPage' element={<RelationsPage/>}/>
-  <Route path='/ItemsPage' element={<ItemsPage/>}/>
+  <Route path='/items' element={<ItemsPage/>}/>
+  <Route path='/item/:name' element={<ItemDetailsPage/>}/>
 
   
 </Routes>
