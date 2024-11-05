@@ -6,9 +6,8 @@ import HomePage from './Pages/HomePage';
 import ChampionsPage from './Pages/ChampionsPage';
 import LorePage from './Pages/LorePage';
 import LorePageBis from './Pages/LorePageBis';
-import RelationsPage from './Pages/RelationsPage';
-
-
+import RelationsPage from './Pages/Relationspage';
+import ItemsPage from './Pages/ItemsPage';
 
 
 function App() {
@@ -22,6 +21,7 @@ function App() {
   <Route path='/LorePage/:id' element={<LorePage/>}/>
   <Route path='/LorePageBis/' element={<LorePageBis/>}/>
   <Route path='/RelationsPage' element={<RelationsPage/>}/>
+  <Route path='/ItemsPage' element={<ItemsPage/>}/>
 
   
 </Routes>
