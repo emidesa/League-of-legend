@@ -9,6 +9,7 @@ import LorePageBis from './Pages/LorePageBis';
 import ItemsPage from './Pages/ItemsPage';
 import ItemDetailsPage from './Pages/ItemDetailsPage';
 import SummonerPage from './Pages/Summonerpage';
+import SummonerDetailsPage from './Pages/SummonerDetailsPage';
 
 
 
@@ -25,7 +26,7 @@ function App() {
   <Route path='/SummonerPage' element={<SummonerPage/>}/>
   <Route path='/items' element={<ItemsPage/>}/>
   <Route path='/item/:name' element={<ItemDetailsPage/>}/>
-
+  <Route path='/SummonerDetailsPage/:id' element={<SummonerDetailsPage/>}/>
   
 </Routes>
 
