@@ -39,16 +39,16 @@ const ItemsPage = () => {
         }))
     }, [searchValue])
 
-    return  <Container className="d-flex flex-column align-items-center">
+    return  <Container className="home-page">
         <h1>Items :</h1>
-        <Form className="col-12">
+        <Form className="col-6 justify-content-center ">
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
         <Form.Label>Recherche ton Item</Form.Label>
         <Form.Control type="text" placeholder="exemple : Bottes" value={searchValue} onChange={handleChange}/>
       </Form.Group>
     </Form>
   
-        <div className="d-flex flex-wrap gap-5">
+        <div className="d-flex flex-wrap gap-5 justify-content-center m-5">
             {filteredItems.map((item) => {
                 return <ItemCard itemCard={item[1]} key={item[0]} />
             })}
