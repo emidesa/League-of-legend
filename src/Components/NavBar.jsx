@@ -23,7 +23,7 @@ const NavBar= () => {
             <Link className='link' to={'/LorePageBis'}> Lore 
           </Link></Navbar.Brand>
           <Navbar.Brand>
-            <Link className='link' to={'/RelationsPage'}> Relations 
+            <Link className='link' to={'/SummonerPage'}> Spells
             </Link></Navbar.Brand>
             <Navbar.Brand>
             <Link className='link' to={'/items'}> Items

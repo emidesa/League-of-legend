@@ -6,9 +6,9 @@ import HomePage from './Pages/HomePage';
 import ChampionsPage from './Pages/ChampionsPage';
 import LorePage from './Pages/LorePage';
 import LorePageBis from './Pages/LorePageBis';
-import RelationsPage from './Pages/Relationspage';
 import ItemsPage from './Pages/ItemsPage';
 import ItemDetailsPage from './Pages/ItemDetailsPage';
+import SummonerPage from './Pages/Summonerpage';
 
 
 
@@ -22,7 +22,7 @@ function App() {
   <Route path='/ChampionsPage' element={<ChampionsPage/>}/>
   <Route path='/LorePage/:id' element={<LorePage/>}/>
   <Route path='/LorePageBis' element={<LorePageBis/>}/>
-  <Route path='/RelationsPage' element={<RelationsPage/>}/>
+  <Route path='/SummonerPage' element={<SummonerPage/>}/>
   <Route path='/items' element={<ItemsPage/>}/>
   <Route path='/item/:name' element={<ItemDetailsPage/>}/>
 
